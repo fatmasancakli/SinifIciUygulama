@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+ <!-- Required meta tags -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+		<link rel="stylesheet" href="css/still.css"/>
+<title>Uygulama Örneği</title>
+
+</h:head>
+
+
+<h:body>
+<h:form>
+
+  <div class="container mt-40">
+            <h3 class="text-center">Ankara Tüm Okullar Listesi</h3>
+            <div class="row mt-30">
+            <ui:repeat var="ls" value="#{indexBean.okullistesi}">
+           
+             <div class="col-md-4 col-sm-6">
+                    <div class="box2">
+                        <img src="#{ls.resimurl}"/>
+                        <div class="box-content">
+                            <div class="inner-content">
+                                <h3 class="title">#{ls.okuladi}</h3>
+                                <span class="post"><h6>#{ls.okuladresi}</h6></span>
+                                <ul class="icon">
+                                    <li><a href="#{ls.okultelefonnumarasi}"><i class="fa fa-phone"></i></a></li>
+                                    <li><a href="#{ls.okulwebsiteadresi}"><i class="fa fa-link"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ui:repeat>
+            
+               
+               
+                  
+                </div>
+            </div>
+  
+      
+
+</h:form>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+</h:body>
+
+
+
+</html>
