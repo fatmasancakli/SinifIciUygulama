@@ -22,9 +22,26 @@ public class indexBean {
 	
 	private tblokullar okulgiris = new tblokullar();
 	
+	private tblokullar okulduzenle = new tblokullar();
+	
+	public tblokullar getOkulduzenle() {
+		return okulduzenle;
+	}
+
+
+	public void setOkulduzenle(tblokullar okulduzenle) {
+		this.okulduzenle = okulduzenle;
+	}
+
+
 	public void okulekle() {
-		
-		okullistesi.add(okulgiris);
+		tblokullar tmp = new tblokullar();
+		tmp.setId(okullistesi.size()+1L);
+		tmp.setOkuladi(okulgiris.getOkuladi());
+		tmp.setOkuladresi(okulgiris.getOkuladresi());
+		tmp.setOkulwebsiteadresi(okulgiris.getOkulwebsiteadresi());
+		tmp.setResimurl(okulgiris.getResimurl());
+		okullistesi.add(tmp);
 	
 		
 	}
